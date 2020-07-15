@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+</head>
+<body>
+<h1>Product Summary Report</h1>
+<table>
+	<tr>
+		<th>Row</th>
+		<th>Product Name</th>
+		<th>Quantity</th>
+	</tr>
+	{{range $index, $element :=.}}
+		{{if mod $index 2}}<tr style="background:#6a7d87;" > {{else}}<tr>{{end}}
+			<td>{{$index}}</td>
+			<td>{{.ProductName}}</td>
+			<td>{{.QuantityOnHand}}</td>
+	</tr>
+	{{end}}
+</table>
+</body>
+</html>
